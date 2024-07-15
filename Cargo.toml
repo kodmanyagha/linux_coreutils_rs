@@ -1,0 +1,33 @@
+[package]
+name = "linux_coreutils_rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5", features = [
+    "std",
+    "color",
+    "help",
+    "usage",
+    "cargo",
+] }
+crossbeam = { version = "0.8", features = ["default"] }
+log = "0.4"
+dotenvy = "0.15"
+env_logger = "0.11"
+
+[[bin]]
+name = "ls-rs"
+path = "src/bin/ls-rs/main.rs"
+
+[[bin]]
+name = "ln-rs"
+path = "src/bin/ln-rs/main.rs"
+
+[[bin]]
+name = "cd-rs"
+path = "src/bin/cd-rs/main.rs"
+
+[[bin]]
+name = "mkdir-rs"
+path = "src/bin/mkdir-rs/main.rs"
